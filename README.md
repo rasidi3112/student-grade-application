@@ -24,7 +24,7 @@ Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database k
 ---
 
 ## 🎬 Demo GIF
-![Demo Aplikasi](docs/demo.gif)  
+![Demo Aplikasi](assets/demo.gif)  
 > GIF ini menunjukkan proses menambahkan mahasiswa, melihat daftar nilai, dan export laporan.
 
 ---
