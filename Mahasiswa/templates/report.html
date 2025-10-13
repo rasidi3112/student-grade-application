@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Nilai Mahasiswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #7c3aed;
+            --accent-color: #c026d3;
+            --background-color: #1e1e2e;
+            --card-bg: rgba(30, 30, 46, 0.8);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --success-color: #22c55e;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        #bg-animation {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .main-title {
+            font-size: 3rem;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .back-btn {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .back-btn:before {
+            content: '←';
+            margin-right: 0.5rem;
+        }
+        
+        .back-btn:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        
+        /* Report Section */
+        .report-section {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .report-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .report-section h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+        
+        .report-meta {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        th {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .empty-state {
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .empty-state p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .stat-box:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .stat-box h4 {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-box p {
+            font-size: 2rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Top Students Section */
+        .top-students {
+            margin-top: 2rem;
+        }
+        
+        .top-student-card {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+        
+        .top-student-card:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .top-student-medal {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+        .top-student-info {
+            flex: 1;
+        }
+        
+        .top-student-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .top-student-details {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .top-student-grade {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Export Buttons */
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .export-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            gap: 0.5rem;
+        }
+        
+        .export-btn:hover {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .export-btn-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Semester and Course Summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .summary-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .summary-card:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .summary-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+        
+        .summary-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .pie-chart-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            th, td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .top-student-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .top-student-medal {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .export-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-container">
+        <canvas id="bg-animation"></canvas>
+    </div>
+    
+    <div class="container">
+        <header>
+            <a href="/" class="back-btn">Kembali ke Dashboard</a>
+            <h1 class="main-title">Laporan Nilai Mahasiswa</h1>
+            <p class="subtitle">Statistik dan analisis nilai mahasiswa Universitas Bumigora</p>
+        </header>
+        
+        <section class="report-section">
+            <div class="report-meta">
+                <div>Tanggal Laporan: <strong>{{ date_now }}</strong></div>
+                <div>Total Mahasiswa: <strong>{{ total_students }}</strong></div>
+            </div>
+            
+            <h3>Rangkuman Nilai keseluruhan</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h4>Rata-rata Nilai</h4>
+                    <p>{{ stats.average|round(2) }}</p>
+                </div>
+                
+                <div class="stat-box">
+                    <h4>Nilai Tertinggi</h4>
+                    <p>{{ stats.highest }}</p>
+                </div>
+                
+                <div class="stat-box">
+                    <h4>Nilai Terendah</h4>
+                    <p>{{ stats.lowest }}</p>
+                </div>
+                
+                <div class="stat-box">
+                    <h4>Mahasiswa Lulus</h4>
+                    <p>{{ stats.passing }}</p>
+                </div>
+                
+                <div class="stat-box">
+                    <h4>Mahasiswa Tidak Lulus</h4>
+                    <p>{{ stats.failing }}</p>
+                </div>
+            </div>
+            
+            <h3>Mahasiswa dengan Nilai Tertinggi</h3>
+            <div class="top-students">
+                {% for student in top_students %}
+                <div class="top-student-card">
+                    <div class="top-student-medal">
+                        {% if loop.index == 1 %}🥇
+                        {% elif loop.index == 2 %}🥈
+                        {% elif loop.index == 3 %}🥉
+                        {% endif %}
+                    </div>
+                    <div class="top-student-info">
+                        <div class="top-student-name">{{ student.name }}</div>
+                        <div class="top-student-details">NPM: {{ student.npm }} | Mata Kuliah: {{ student.course }} | Semester: {{ student.semester }}</div>
+                    </div>
+                    <div class="top-student-grade">{{ student.grade }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        <section class="report-section">
+            <h2>Rekap Nilai Mahasiswa</h2>
+            
+            <div class="table-container">
+                <table id="grades-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>NPM</th>
+                            <th>Mata Kuliah</th>
+                            <th>Nilai</th>
+                            <th>Grade</th>
+                            <th>Semester</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if students %}
+                            {% for student in students %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ student.name }}</td>
+                                    <td>{{ student.npm }}</td>
+                                    <td>{{ student.course }}</td>
+                                    <td>{{ student.grade }}</td>
+                                    <td>
+                                        {% if student.grade >= 85 %}A
+                                        {% elif student.grade >= 75 %}B
+                                        {% elif student.grade >= 65 %}C
+                                        {% elif student.grade >= 55 %}D
+                                        {% else %}E
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ student.semester }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="7" class="empty-state">
+                                    <p>Belum ada data nilai yang tersimpan</p>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="report-section">
+            <h2>Analisis Nilai</h2>
+            
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h4>Rekap Nilai per Semester</h4>
+                    {% for semester, data in semester_stats.items() %}
+                    <div class="summary-item">
+                        <span>{{ semester }}</span>
+                        <span class="summary-value">{{ data.average|round(2) }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="summary-card">
+                    <h4>Rekap Nilai per Mata Kuliah</h4>
+                    {% for course, data in course_stats.items() %}
+                    <div class="summary-item">
+                        <span>{{ course }}</span>
+                        <span class="summary-value">{{ data.average|round(2) }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="summary-card">
+                    <h4>Distribusi Grade</h4>
+                    {% for grade, count in grade_distribution.items() %}
+                    <div class="summary-item">
+                        <span>Grade {{ grade }}</span>
+                        <span class="summary-value">{{ count }} mahasiswa</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="pie-chart-container">
+                <canvas id="grade-distribution-chart" width="300" height="300"></canvas>
+            </div>
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4f46e5;"></div>
+                    <span>A</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #7c3aed;"></div>
+                    <span>B</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #c026d3;"></div>
+                    <span>C</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f59e0b;"></div>
+                    <span>D</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #ef4444;"></div>
+                    <span>E</span>
+                </div>
+            </div>
+        </section>
+        
+        <div class="export-buttons">
+            <a href="/export/pdf" class="export-btn">
+                <span class="export-btn-icon">📄</span>
+                <span>Export PDF</span>
+            </a>
+            <a href="/export/excel" class="export-btn">
+                <span class="export-btn-icon">📊</span>
+                <span>Export Excel</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Initialize Chart.js pie chart for grade distribution
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('grade-distribution-chart').getContext('2d');
+            
+            // Get data from template
+            const gradeData = {
+                {% for grade, count in grade_distribution.items() %}
+                "{{ grade }}": {{ count }},
+                {% endfor %}
+            };
+            
+            const gradeColors = {
+                'A': '#4f46e5',
+                'B': '#7c3aed',
+                'C': '#c026d3',
+                'D': '#f59e0b',
+                'E': '#ef4444'
+            };
+            
+            const data = {
+                labels: Object.keys(gradeData),
+                datasets: [{
+                    data: Object.values(gradeData),
+                    backgroundColor: Object.keys(gradeData).map(grade => gradeColors[grade]),
+                    borderWidth: 1,
+                    borderColor: '#1e1e2e'
+                }]
+            };
+            
+            const config = {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `Grade ${label}: ${value} mahasiswa (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            new Chart(ctx, config);
+        });
+    </script>
+</body>
+</html>

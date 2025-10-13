@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lihat Nilai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #7c3aed;
+            --accent-color: #c026d3;
+            --background-color: #1e1e2e;
+            --card-bg: rgba(30, 30, 46, 0.8);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --success-color: #22c55e;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        #bg-animation {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .main-title {
+            font-size: 3rem;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.2s ease;
+        }
+        
+        .back-btn {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .back-btn:before {
+            content: '←';
+            margin-right: 0.5rem;
+        }
+        
+        .back-btn:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        
+        /* Table Styles */
+        .search-bar {
+            margin-bottom: 1.5rem;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .table-container {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1.2s ease;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        th {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .delete-btn {
+            background-color: var(--danger-color);
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.8rem;
+        }
+        
+        .delete-btn:hover {
+            background-color: #b91c1c;
+            transform: scale(1.05);
+        }
+        
+        .empty-state {
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .empty-state p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .btn {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            display: inline-block;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Stats Section */
+        .stats-container {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1.6s ease;
+        }
+        
+        .stats-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .stat-box:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .stat-box h3 {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-box p {
+            font-size: 2rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+        
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+        
+        .modal-title {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .modal-content {
+            color: var(--text-secondary);
+        }
+        
+        .modal-content h3 {
+            margin: 1.5rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .modal-content p {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .modal-content .btn {
+            margin-top: 1.5rem;
+        }
+        
+        .highlight {
+            background: rgba(79, 70, 229, 0.2);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .top-list {
+            margin: 1rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .top-list-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .top-list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .top-list-medal {
+            margin-right: 0.5rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            th, td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .modal {
+                padding: 1.5rem;
+                width: 95%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-container">
+        <canvas id="bg-animation"></canvas>
+    </div>
+    
+    <div class="container">
+        <header>
+            <a href="/" class="back-btn">Kembali ke Dashboard</a>
+            <h1 class="main-title">Data Nilai Mahasiswa</h1>
+            <p class="subtitle">Lihat dan kelola data nilai semua mahasiswa</p>
+        </header>
+        
+        <div class="stats-container">
+            <h2>Statistik Nilai</h2>
+            <div class="stats-grid">
+                <div class="stat-box" id="average-stat">
+                    <h3>Rata-rata</h3>
+                    <p id="average-grade">-</p>
+                </div>
+                
+                <div class="stat-box" id="highest-stat">
+                    <h3>🥇 Nilai Tertinggi</h3>
+                    <p id="highest-grade">-</p>
+                </div>
+                
+                <div class="stat-box" id="lowest-stat">
+                    <h3>🧱 Nilai Terendah</h3>
+                    <p id="lowest-grade">-</p>
+                </div>
+                
+                <div class="stat-box" id="total-stat">
+                    <h3>🔢 Total Data</h3>
+                    <p id="total-students">-</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Cari berdasarkan nama atau mata kuliah...">
+        </div>
+        
+        <div class="table-container">
+            <table id="grades-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NPM</th>
+                        <th>Mata Kuliah</th>
+                        <th>Nilai</th>
+                        <th>Grade</th>
+                        <th>Semester</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if students %}
+                        {% for student in students|reverse %}
+                            <tr data-id="{{ student.id }}">
+                                <td>{{ loop.index }}</td>
+                                <td>{{ student.name }}</td>
+                                <td>{{ student.npm }}</td>
+                                <td>{{ student.course }}</td>
+                                <td>{{ student.grade }}</td>
+                                <td>
+                                    {% if student.grade >= 85 %}A
+                                    {% elif student.grade >= 75 %}B
+                                    {% elif student.grade >= 65 %}C
+                                    {% elif student.grade >= 50 %}D
+                                    {% else %}E
+                                    {% endif %}
+                                </td>
+                                <td>{{ student.semester }}</td>
+                                <td>
+                                    <button class="delete-btn" onclick="deleteStudent('{{ student.id }}')">Hapus</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="8" class="empty-state">
+                                <p>Belum ada data nilai yang tersimpan</p>
+                                <a href="/add" class="btn">Tambah Data Nilai</a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Modal for detailed statistics -->
+    <div class="modal-overlay" id="stats-modal">
+        <div class="modal">
+            <button class="modal-close" id="modal-close">×</button>
+            <h2 class="modal-title" id="modal-title">Statistik Detail</h2>
+            <div class="modal-content" id="modal-content">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+    <script>
+        // Fungsi pencarian tabel
+        document.getElementById('search-input').addEventListener('keyup', function() {
+            const searchText = this.value.toLowerCase();
+            const table = document.getElementById('grades-table');
+            const rows = table.getElementsByTagName('tr');
+            
+            for (let i = 1; i < rows.length; i++) {
+                if (rows[i].cells && rows[i].cells.length > 1) {
+                    const name = rows[i].cells[1].textContent.toLowerCase();
+                    const course = rows[i].cells[3].textContent.toLowerCase();
+                    
+                    if (name.includes(searchText) || course.includes(searchText)) {
+                        rows[i].style.display = '';
+                    } else {
+                        rows[i].style.display = 'none';
+                    }
+                }
+            }
+        });
+        
+        // Fungsi delete
+        function deleteStudent(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                fetch(`/api/students/${id}`, {
+                    method: 'DELETE',
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.querySelector(`tr[data-id="${id}"]`).remove();
+                        // Refresh statistics after deletion
+                        fetchAndDisplayStats();
+                        // Update row numbers
+                        updateRowNumbers();
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        }
+        
+        // Update row numbers after deletion
+        function updateRowNumbers() {
+            const rows = document.querySelectorAll('#grades-table tbody tr');
+            rows.forEach((row, index) => {
+                const firstCell = row.cells[0];
+                if (firstCell) {
+                    firstCell.textContent = index + 1;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

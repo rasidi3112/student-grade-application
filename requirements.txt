@@ -1,0 +1,5 @@
+flask==2.0.1
+pandas==1.3.3
+openpyxl==3.0.9
+pdfkit==1.0.0
+wkhtmltopdf==0.2

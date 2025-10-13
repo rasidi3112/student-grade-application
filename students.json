@@ -1,0 +1,1001 @@
+[
+    {
+        "id": "STD202506180001",
+        "name": "Ahmad Rasidi",
+        "npm": "24010110101",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 100.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:00:01"
+    },
+    {
+        "id": "STD202506180002",
+        "name": "Kayla Azzahra",
+        "npm": "24010110102",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 95.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:01:02"
+    },
+    {
+        "id": "STD202506180003",
+        "name": "Firman",
+        "npm": "24010110103",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 90.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:02:03"
+    },
+    {
+        "id": "STD202506180004",
+        "name": "Doni Pratama",
+        "npm": "24010110104",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 85.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:03:04"
+    },
+    {
+        "id": "STD202506180005",
+        "name": "Elisa Nur",
+        "npm": "24010110105",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 80.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:04:05"
+    },
+    {
+        "id": "STD202506180006",
+        "name": "Fajar Setiawan",
+        "npm": "24010110106",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 75.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:05:06"
+    },
+    {
+        "id": "STD202506180007",
+        "name": "Gina Lestari",
+        "npm": "24010110107",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 70.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:06:07"
+    },
+    {
+        "id": "STD202506180008",
+        "name": "Hendra Kusuma",
+        "npm": "24010110108",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 65.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:07:08"
+    },
+    {
+        "id": "STD202506180009",
+        "name": "Indah Sari",
+        "npm": "24010110109",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 60.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:08:09"
+    },
+    {
+        "id": "STD202506180010",
+        "name": "Joko Susilo",
+        "npm": "24010110110",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 55.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:09:10"
+    },
+    {
+        "id": "STD202506180011",
+        "name": "Kiki Amalia",
+        "npm": "24010110111",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 54.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:10:11"
+    },
+    {
+        "id": "STD202506180012",
+        "name": "Lina Anggraini",
+        "npm": "24010110112",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 53.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:11:12"
+    },
+    {
+        "id": "STD202506180013",
+        "name": "Miko Prabowo",
+        "npm": "24010110113",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 52.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:12:13"
+    },
+    {
+        "id": "STD202506180014",
+        "name": "Nina Sari",
+        "npm": "24010110114",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 51.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:13:14"
+    },
+    {
+        "id": "STD202506180015",
+        "name": "Oka Setiawan",
+        "npm": "24010110115",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 50.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:14:15"
+    },
+    {
+        "id": "STD202506180016",
+        "name": "Putu Agung",
+        "npm": "24010110116",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 49.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:15:16"
+    },
+    {
+        "id": "STD202506180017",
+        "name": "Qori Alfi",
+        "npm": "24010110117",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 48.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:16:17"
+    },
+    {
+        "id": "STD202506180018",
+        "name": "Rina Lestari",
+        "npm": "24010110118",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 47.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:17:18"
+    },
+    {
+        "id": "STD202506180019",
+        "name": "Sandi Wijaya",
+        "npm": "24010110119",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 46.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:18:19"
+    },
+    {
+        "id": "STD202506180020",
+        "name": "Tina Rahmawati",
+        "npm": "24010110120",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 45.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:19:20"
+    },
+    {
+        "id": "STD202506180021",
+        "name": "Umar Faruq",
+        "npm": "24010110121",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 44.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:20:21"
+    },
+    {
+        "id": "STD202506180022",
+        "name": "Vina Melati",
+        "npm": "24010110122",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 43.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:21:22"
+    },
+    {
+        "id": "STD202506180023",
+        "name": "Wira Saputra",
+        "npm": "24010110123",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 42.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:22:23"
+    },
+    {
+        "id": "STD202506180024",
+        "name": "Yuniar Sari",
+        "npm": "24010110124",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 41.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:23:24"
+    },
+    {
+        "id": "STD202506180025",
+        "name": "Zaki Nur",
+        "npm": "24010110125",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 40.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:24:25"
+    },
+    {
+        "id": "STD202506180026",
+        "name": "Arif Hidayat",
+        "npm": "24010110126",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 39.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:25:26"
+    },
+    {
+        "id": "STD202506180027",
+        "name": "Bintang Cahyani",
+        "npm": "24010110127",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 38.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:26:27"
+    },
+    {
+        "id": "STD202506180028",
+        "name": "Candra Pramudita",
+        "npm": "24010110128",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 37.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:27:28"
+    },
+    {
+        "id": "STD202506180029",
+        "name": "Dewi Sinta",
+        "npm": "24010110129",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 36.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:28:29"
+    },
+    {
+        "id": "STD202506180030",
+        "name": "Eko Santoso",
+        "npm": "24010110130",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 35.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:29:30"
+    },
+    {
+        "id": "STD202506180031",
+        "name": "Fani Maulida",
+        "npm": "24010110131",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 34.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:30:31"
+    },
+    {
+        "id": "STD202506180032",
+        "name": "Guntur Pratama",
+        "npm": "24010110132",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 33.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:31:32"
+    },
+    {
+        "id": "STD202506180033",
+        "name": "Hani Kurnia",
+        "npm": "24010110133",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 32.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:32:33"
+    },
+    {
+        "id": "STD202506180034",
+        "name": "Iwan Setiawan",
+        "npm": "24010110134",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 31.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:33:34"
+    },
+    {
+        "id": "STD202506180035",
+        "name": "Julianto Budi",
+        "npm": "24010110135",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 30.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:34:35"
+    },
+    {
+        "id": "STD202506180036",
+        "name": "Kamal Hidayat",
+        "npm": "24010110136",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 29.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:35:36"
+    },
+    {
+        "id": "STD202506180037",
+        "name": "Larasati Dewi",
+        "npm": "24010110137",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 28.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:36:37"
+    },
+    {
+        "id": "STD202506180038",
+        "name": "Maya Nursanti",
+        "npm": "24010110138",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 27.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:37:38"
+    },
+    {
+        "id": "STD202506180039",
+        "name": "Nadia Amalia",
+        "npm": "24010110139",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 26.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:38:39"
+    },
+    {
+        "id": "STD202506180040",
+        "name": "Omar Falah",
+        "npm": "24010110140",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 25.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:39:40"
+    },
+    {
+        "id": "STD202506180041",
+        "name": "Pangestu Wibowo",
+        "npm": "24010110141",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 24.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:40:41"
+    },
+    {
+        "id": "STD202506180042",
+        "name": "Qila Zahirah",
+        "npm": "24010110142",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 23.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:41:42"
+    },
+    {
+        "id": "STD202506180043",
+        "name": "Rizal Fahmi",
+        "npm": "24010110143",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 22.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:42:43"
+    },
+    {
+        "id": "STD202506180044",
+        "name": "Siti Aisyah",
+        "npm": "24010110144",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 21.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:43:44"
+    },
+    {
+        "id": "STD202506180045",
+        "name": "Taufik Hidayat",
+        "npm": "24010110145",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 20.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:44:45"
+    },
+    {
+        "id": "STD202506180046",
+        "name": "Uli Rahmat",
+        "npm": "24010110146",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 19.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:45:46"
+    },
+    {
+        "id": "STD202506180047",
+        "name": "Vivi Yulia",
+        "npm": "24010110147",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 18.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:46:47"
+    },
+    {
+        "id": "STD202506180048",
+        "name": "Wanda Sari",
+        "npm": "24010110148",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 17.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:47:48"
+    },
+    {
+        "id": "STD202506180049",
+        "name": "Xena Putri",
+        "npm": "24010110149",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 16.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:48:49"
+    },
+    {
+        "id": "STD202506180050",
+        "name": "Yusuf Rahman",
+        "npm": "24010110150",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 15.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:49:50"
+    },
+    {
+        "id": "STD202506180310",
+        "name": "Zainal Abidin",
+        "npm": "24010110310",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 10.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 09:59:59"
+    },
+    {
+        "id": "STD202506180001",
+        "name": "Ahmad Rizky",
+        "npm": "24010110101",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 100.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:00:01"
+    },
+    {
+        "id": "STD202506180002",
+        "name": "Budi Santoso",
+        "npm": "24010110102",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 95.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:01:02"
+    },
+    {
+        "id": "STD202506180003",
+        "name": "Citra Dewi",
+        "npm": "24010110103",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 90.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:02:03"
+    },
+    {
+        "id": "STD202506180004",
+        "name": "Doni Pratama",
+        "npm": "24010110104",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 85.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:03:04"
+    },
+    {
+        "id": "STD202506180005",
+        "name": "Elisa Nur",
+        "npm": "24010110105",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 80.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:04:05"
+    },
+    {
+        "id": "STD202506180006",
+        "name": "Fajar Setiawan",
+        "npm": "24010110106",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 75.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:05:06"
+    },
+    {
+        "id": "STD202506180007",
+        "name": "Gina Lestari",
+        "npm": "24010110107",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 70.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:06:07"
+    },
+    {
+        "id": "STD202506180008",
+        "name": "Hendra Kusuma",
+        "npm": "24010110108",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 65.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:07:08"
+    },
+    {
+        "id": "STD202506180009",
+        "name": "Indah Sari",
+        "npm": "24010110109",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 60.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:08:09"
+    },
+    {
+        "id": "STD202506180010",
+        "name": "Joko Susilo",
+        "npm": "24010110110",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 55.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:09:10"
+    },
+    {
+        "id": "STD202506180011",
+        "name": "Kiki Amalia",
+        "npm": "24010110111",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 54.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:10:11"
+    },
+    {
+        "id": "STD202506180012",
+        "name": "Lina Anggraini",
+        "npm": "24010110112",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 53.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:11:12"
+    },
+    {
+        "id": "STD202506180013",
+        "name": "Miko Prabowo",
+        "npm": "24010110113",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 52.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:12:13"
+    },
+    {
+        "id": "STD202506180014",
+        "name": "Nina Sari",
+        "npm": "24010110114",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 51.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:13:14"
+    },
+    {
+        "id": "STD202506180015",
+        "name": "Oka Setiawan",
+        "npm": "24010110115",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 50.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:14:15"
+    },
+    {
+        "id": "STD202506180016",
+        "name": "Putu Agung",
+        "npm": "24010110116",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 49.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:15:16"
+    },
+    {
+        "id": "STD202506180017",
+        "name": "Qori Alfi",
+        "npm": "24010110117",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 48.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:16:17"
+    },
+    {
+        "id": "STD202506180018",
+        "name": "Rina Lestari",
+        "npm": "24010110118",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 47.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:17:18"
+    },
+    {
+        "id": "STD202506180019",
+        "name": "Sandi Wijaya",
+        "npm": "24010110119",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 46.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:18:19"
+    },
+    {
+        "id": "STD202506180020",
+        "name": "Tina Rahmawati",
+        "npm": "24010110120",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 45.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:19:20"
+    },
+    {
+        "id": "STD202506180021",
+        "name": "Umar Faruq",
+        "npm": "24010110121",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 44.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:20:21"
+    },
+    {
+        "id": "STD202506180022",
+        "name": "Vina Melati",
+        "npm": "24010110122",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 43.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:21:22"
+    },
+    {
+        "id": "STD202506180023",
+        "name": "Wira Saputra",
+        "npm": "24010110123",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 42.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:22:23"
+    },
+    {
+        "id": "STD202506180024",
+        "name": "Yuniar Sari",
+        "npm": "24010110124",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 41.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:23:24"
+    },
+    {
+        "id": "STD202506180025",
+        "name": "Zaki Nur",
+        "npm": "24010110125",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 40.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:24:25"
+    },
+    {
+        "id": "STD202506180026",
+        "name": "Arif Hidayat",
+        "npm": "24010110126",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 39.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:25:26"
+    },
+    {
+        "id": "STD202506180027",
+        "name": "Bintang Cahyani",
+        "npm": "24010110127",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 38.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:26:27"
+    },
+    {
+        "id": "STD202506180028",
+        "name": "Candra Pramudita",
+        "npm": "24010110128",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 37.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:27:28"
+    },
+    {
+        "id": "STD202506180029",
+        "name": "Dewi Sinta",
+        "npm": "24010110129",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 36.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:28:29"
+    },
+    {
+        "id": "STD202506180030",
+        "name": "Eko Santoso",
+        "npm": "24010110130",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 35.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:29:30"
+    },
+    {
+        "id": "STD202506180031",
+        "name": "Fani Maulida",
+        "npm": "24010110131",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 34.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:30:31"
+    },
+    {
+        "id": "STD202506180032",
+        "name": "Guntur Pratama",
+        "npm": "24010110132",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 33.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:31:32"
+    },
+    {
+        "id": "STD202506180033",
+        "name": "Hani Kurnia",
+        "npm": "24010110133",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 32.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:32:33"
+    },
+    {
+        "id": "STD202506180034",
+        "name": "Iwan Setiawan",
+        "npm": "24010110134",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 31.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:33:34"
+    },
+    {
+        "id": "STD202506180035",
+        "name": "Julianto Budi",
+        "npm": "24010110135",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 30.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:34:35"
+    },
+    {
+        "id": "STD202506180036",
+        "name": "Kamal Hidayat",
+        "npm": "24010110136",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 29.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:35:36"
+    },
+    {
+        "id": "STD202506180037",
+        "name": "Larasati Dewi",
+        "npm": "24010110137",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 28.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:36:37"
+    },
+    {
+        "id": "STD202506180038",
+        "name": "Maya Nursanti",
+        "npm": "24010110138",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 27.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:37:38"
+    },
+    {
+        "id": "STD202506180039",
+        "name": "Nadia Amalia",
+        "npm": "24010110139",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 26.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:38:39"
+    },
+    {
+        "id": "STD202506180040",
+        "name": "Omar Falah",
+        "npm": "24010110140",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 25.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:39:40"
+    },
+    {
+        "id": "STD202506180041",
+        "name": "Pangestu Wibowo",
+        "npm": "24010110141",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 24.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:40:41"
+    },
+    {
+        "id": "STD202506180042",
+        "name": "Qila Zahirah",
+        "npm": "24010110142",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 23.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:41:42"
+    },
+    {
+        "id": "STD202506180043",
+        "name": "Rizal Fahmi",
+        "npm": "24010110143",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 22.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:42:43"
+    },
+    {
+        "id": "STD202506180044",
+        "name": "Siti Aisyah",
+        "npm": "24010110144",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 21.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:43:44"
+    },
+    {
+        "id": "STD202506180045",
+        "name": "Taufik Hidayat",
+        "npm": "24010110145",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 20.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:44:45"
+    },
+    {
+        "id": "STD202506180046",
+        "name": "Uli Rahmat",
+        "npm": "24010110146",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 19.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:45:46"
+    },
+    {
+        "id": "STD202506180047",
+        "name": "Vivi Yulia",
+        "npm": "24010110147",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 18.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:46:47"
+    },
+    {
+        "id": "STD202506180048",
+        "name": "Wanda Sari",
+        "npm": "24010110148",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 17.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:47:48"
+    },
+    {
+        "id": "STD202506180049",
+        "name": "Xena Putri",
+        "npm": "24010110149",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 16.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:48:49"
+    },
+    {
+        "id": "STD202506180050",
+        "name": "Yusuf Rahman",
+        "npm": "24010110150",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 15.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:49:50"
+    },
+    {
+        "id": "STD202506180051",
+        "name": "Zainab Aulia",
+        "npm": "24010110151",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 14.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:50:51"
+    },
+    {
+        "id": "STD202506180052",
+        "name": "Aditya Rahman",
+        "npm": "24010110152",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 13.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:51:52"
+    },
+    {
+        "id": "STD202506180053",
+        "name": "Bella Kurnia",
+        "npm": "24010110153",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 12.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:52:53"
+    },
+    {
+        "id": "STD202506180054",
+        "name": "Cindy Ananda",
+        "npm": "24010110154",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 11.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:53:54"
+    },
+    {
+        "id": "STD202506180055",
+        "name": "Dimas Prasetyo",
+        "npm": "24010110155",
+        "course": "Algoritma dan Struktur Data",
+        "grade": 10.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-18 08:54:55"
+    },
+    {
+        "id": "STD20250625213702",
+        "name": "Ahmad Rasiid",
+        "npm": "24010110145",
+        "course": "Algoritma dan struktur data ",
+        "grade": 95.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-06-25 21:37:02"
+    },
+    {
+        "id": "STD20250708114455",
+        "name": "putri",
+        "npm": "24010110175",
+        "course": "Algoritma dan struktur data ",
+        "grade": 80.0,
+        "semester": "Semester 4",
+        "timestamp": "2025-07-08 11:44:55"
+    },
+    {
+        "id": "STD20250708114604",
+        "name": "swdw",
+        "npm": "24010110175",
+        "course": "Algoritma dan struktur data ",
+        "grade": 1.0,
+        "semester": "Semester 1",
+        "timestamp": "2025-07-08 11:46:04"
+    },
+    {
+        "id": "STD20250708190118",
+        "name": "Udin sedunia ",
+        "npm": "24010110154",
+        "course": "Algoritma dan struktur data ",
+        "grade": 89.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-07-08 19:01:18"
+    },
+    {
+        "id": "STD20250709024630",
+        "name": "UDINNN",
+        "npm": "24010110145",
+        "course": "Algoritma dan struktur data ",
+        "grade": 90.0,
+        "semester": "Semester 2",
+        "timestamp": "2025-07-09 02:46:30"
+    }
+]
