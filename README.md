@@ -60,8 +60,8 @@ Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database k
 ## 🚀 Instalasi & Cara Menjalankan
 1. **Clone repository**  
 ```bash
-git clone https://github.com/rasidi3112/TUGAS_BESAR.git
-cd TUGAS_BESAR
+git clone https://github.com/rasidi3112/student-grade-application.git
+cd student-grade-application
 
 python3 -m venv .venv
 source .venv/bin/activate  # Mac/Linux
