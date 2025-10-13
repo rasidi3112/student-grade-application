@@ -2,7 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)  
 [![Flask](https://img.shields.io/badge/Flask-2.3-lightgrey.svg)](https://flask.palletsprojects.com/)  
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![Last Commit](https://img.shields.io/github/last-commit/rasidi3112/TUGAS_BESAR.svg)](https://github.com/rasidi3112/TUGAS_BESAR/commits/main)
 
 ---
 
@@ -19,6 +20,21 @@
 **Ini adalah bagian dari project kami sebagai Tugas Besar UAS Semester 2 matkul Algoritma dan Struktur Data.**
 
 Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database kompleks.
+
+---
+
+## 🎬 Demo GIF
+![Demo Aplikasi](docs/demo.gif)  
+> GIF ini menunjukkan proses menambahkan mahasiswa, melihat daftar nilai, dan export laporan.
+
+---
+
+## 📸 Screenshot
+### Halaman Utama
+![Index Page](docs/screenshot_index.png)
+
+### Laporan Nilai Mahasiswa
+![Report Page](docs/screenshot_report.png)
 
 ---
 
@@ -46,9 +62,3 @@ Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database k
 ```bash
 git clone https://github.com/rasidi3112/TUGAS_BESAR.git
 cd TUGAS_BESAR
-python3 -m venv .venv
-source .venv/bin/activate  # Mac/Linux
-.venv\Scripts\activate     # Windows
-pip install -r requirements.txt
-python app.py
-http://127.0.0.1:5000/
