@@ -31,7 +31,7 @@ Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database k
 
 ## 📸 Screenshot
 ### Halaman Utama
-![Index Page](docs/screenshot_index.png)
+![Index Page](assets/screenshot_index.png)
 
 ### Laporan Nilai Mahasiswa
 ![Report Page](docs/screenshot_report.png)
