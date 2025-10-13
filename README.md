@@ -62,3 +62,14 @@ Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database k
 ```bash
 git clone https://github.com/rasidi3112/TUGAS_BESAR.git
 cd TUGAS_BESAR
+
+python3 -m venv .venv
+source .venv/bin/activate  # Mac/Linux
+.venv\Scripts\activate     # Windows
+
+pip install -r requirements.txt
+
+python3 app.py
+
+http://127.0.0.1:5000/
+
