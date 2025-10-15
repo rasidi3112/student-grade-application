@@ -17,9 +17,7 @@
 - Mengekspor laporan ke **PDF** dan **Excel** secara profesional.  
 - Menyediakan **API JSON** untuk integrasi dengan aplikasi lain.
 
-**Ini adalah bagian dari project kami sebagai Tugas Besar UAS Semester 2 matkul Algoritma dan Struktur Data.**
-
-Aplikasi ini ideal untuk **keperluan akademik sederhana** tanpa perlu database kompleks.
+**Ini adalah bagian dari project kami sebagai Tugas Besar / Tugas Akhir , UAS Semester 2 matkul Algoritma dan Struktur Data.**
 
 ---
 
