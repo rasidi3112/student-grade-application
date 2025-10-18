@@ -18,6 +18,12 @@
 - Menyediakan **API JSON** untuk integrasi dengan aplikasi lain.
 
 **Ini adalah bagian dari project kami sebagai Tugas Besar / Tugas Akhir , UAS Semester 2 matkul Algoritma dan Struktur Data.**
+---
+**Nama Kelompok**
+1. Ahmad Rasidi
+2. Kayla Azzahra
+3. Dimas risky
+4. Firman maulana
 
 ---
 
